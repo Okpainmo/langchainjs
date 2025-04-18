@@ -6,7 +6,7 @@
   "main": "./index.mjs",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "node init && tsc",
     "test": "bun run test:esm && bun run test:cjs && bun run test:cjs:import && bun run test:entrypoints && bun run test:ts",
     "test:esm": "bun src/index.js",
     "test:cjs": "bun src/require.cjs",

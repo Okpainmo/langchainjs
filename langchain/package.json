@@ -1,6 +1,6 @@
 {
   "name": "langchain",
-  "version": "0.3.22",
+  "version": "0.3.23",
   "description": "Typescript bindings for langchain",
   "type": "module",
   "engines": {
@@ -393,8 +393,8 @@
   },
   "homepage": "https://github.com/langchain-ai/langchainjs/tree/main/langchain/",
   "scripts": {
-    "build": "yarn turbo:command build:internal --filter=langchain",
-    "build:internal": "yarn lc_build --create-entrypoints --pre --tree-shaking --gen-maps",
+    "build": "node init && yarn turbo:command build:internal --filter=langchain",
+    "build:internal": "node init && yarn lc_build --create-entrypoints --pre --tree-shaking --gen-maps",
     "lint:eslint": "NODE_OPTIONS=--max-old-space-size=4096 eslint --cache --ext .ts,.js src/",
     "lint:dpdm": "dpdm --exit-code circular:1 --no-warning --no-tree src/*.ts src/**/*.ts",
     "lint": "yarn lint:eslint && yarn lint:dpdm",

@@ -19,9 +19,9 @@
   },
   "private": true,
   "scripts": {
-    "start": "wrangler dev",
+    "start": "node init && wrangler dev",
     "deploy": "wrangler deploy",
-    "build": "wrangler deploy --dry-run --outdir=dist",
+    "build": "node init && wrangler deploy --dry-run --outdir=dist",
     "test": "vitest run **/*.unit.test.ts",
     "test:integration": "vitest run **/*.int.test.ts"
   }
